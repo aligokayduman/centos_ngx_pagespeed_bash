@@ -59,6 +59,7 @@ If you want to install automatically, you can run this code on commad line
 `bash <(curl -f -L -sS https://goo.gl/Wy3qNY) page_speed_version nginx_version $HOME`
 
 google page speed module versions https://modpagespeed.com/doc/release_notes
+
 nginx versions http://nginx.org/en/download.html
 
 example: `bash <(curl -f -L -sS https://goo.gl/Wy3qNY) 1.12.34.2 1.8.1 $HOME`
