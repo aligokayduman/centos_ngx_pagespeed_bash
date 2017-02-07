@@ -11,11 +11,13 @@ PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
 
 cd ~
 NPS_VERSION=$1
+sudo rm -rf v${NPS_VERSION}-beta.zip
 sudo wget https://github.com/pagespeed/ngx_pagespeed/archive/v${NPS_VERSION}-beta.zip
 sudo unzip v${NPS_VERSION}-beta.zip
 cd ngx_pagespeed-${NPS_VERSION}-beta/
 psol_url=https://dl.google.com/dl/page-speed/psol/${NPS_VERSION}.tar.gz
 [ -e scripts/format_binary_url.sh ] && psol_url=$(scripts/format_binary_url.sh PSOL_BINARY_URL)
+sudo rm -rf $(basename ${psol_url})
 sudo wget ${psol_url}
 sudo tar -xzvf $(basename ${psol_url})
 
@@ -23,6 +25,7 @@ sudo yum install openssl-devel libxslt-devel libxml2-devel gd-devel perl-ExtUtil
 
 cd ~
 NGINX_VERSION=$2
+sudo rm -rf nginx-${NGINX_VERSION}.tar.gz
 sudo wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 sudo tar -xvzf nginx-${NGINX_VERSION}.tar.gz
 cd nginx-${NGINX_VERSION}/

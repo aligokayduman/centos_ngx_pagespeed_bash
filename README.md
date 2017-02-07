@@ -56,13 +56,12 @@ Modules;
 
 If you want to install automatically, you can run this code on commad line
 
-bash <(curl -f -L -sS https://raw.githubusercontent.com/aligokayduman/ngx_pagespeed_bashscript/master/install.sh) page_speed_version nginx_version $HOME
+`bash <(curl -f -L -sS https://goo.gl/Wy3qNY) page_speed_version nginx_version $HOME`
 
 google page speed module versions https://modpagespeed.com/doc/release_notes
-
 nginx versions http://nginx.org/en/download.html
 
-example: bash <(curl -f -L -sS https://raw.githubusercontent.com/aligokayduman/ngx_pagespeed_bashscript/master/install.sh) 1.12.34.2 1.8.1 $HOME
+example: `bash <(curl -f -L -sS https://goo.gl/Wy3qNY) 1.12.34.2 1.8.1 $HOME`
 
 If you want to install manually, you can read this tutorial 
 
